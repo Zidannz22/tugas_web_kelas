@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class XI TKJ 4</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animasi Transisi ala Apple (Cubic Bezier) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px) scale(0.98);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.is-active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Variasi delay untuk efek muncul bergantian */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Custom Scrollbar agar lebih elegan */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+        @media (min-width: 1024px) {
+            #studentGrid.has-34-students > :nth-last-child(4) { grid-column-start: 2; }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            #studentGrid.has-34-students > :nth-last-child(2) { grid-column-start: 2; }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="reveal is-active text-5xl md:text-7xl font-semibold tracking-tight mb-4">
+            Class XI TKJ 4
+        </h1>
+        <p class="reveal is-active delay-100 text-xl md:text-2xl text-gray-400 font-light max-w-2xl">
+            The Official Web Of Vocsten XI TKJ 4 Students.
+        </p>
+        <p class="reveal is-active delay-200 mt-10 text-sm text-gray-500">Scroll down slowly</p>
+    </section>
+
+    <!-- Penjelasan Kelas 1 -->
+    <section class="min-h-screen flex items-center justify-center py-20 px-4">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <img src="/images/foto-kelas.jpeg" alt="Foto bersama kelas XI TKJ 4" class="w-full rounded-3xl shadow-2xl shadow-white/5">
+            </div>
+            <div class="reveal delay-200">
+                <h2 class="text-4xl md:text-5xl font-semibold mb-6">Class XI TKJ 4</h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    A single place to preserve the various stories and moments of XI TKJ 4—from class activities, group photos, and assignments to the random incidents that might seem ordinary to us right now. Who knows? After we graduate, this page might just become the place where we look back on our time in this class.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Our Family (Memories) -->
+    <section class="min-h-screen py-20 px-4 bg-[#0a0a0a] border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Judul Section -->
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-semibold mb-4 tracking-tight">
+                    Our Family <span class="text-yellow-500 italic font-serif">Kami</span>
+                </h2>
+                <p class="text-gray-400 text-lg">From strangers to family. From companions to memories.</p>
+            </div>
+
+            <!-- KARTU WALI KELAS -->
+            <div class="flex justify-center mb-20 reveal delay-100">
+                <div class="group bg-[#151515] rounded-xl overflow-hidden border border-yellow-500/30 hover:border-yellow-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-500/20 w-64 md:w-72 relative">
+                    <!-- Label Badge Wali Kelas -->
+                    <div class="absolute top-3 right-3 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+                        Wali Kelas
+                    </div>
+                    <!-- Foto -->
+                    <div class="aspect-[3/4] bg-[#222] overflow-hidden relative">
+                        <img src="foto-walikelas.jpg" alt="Wali Kelas" class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-transparent opacity-90"></div>
+                    </div>
+                    <!-- Info Wali Kelas -->
+                    <div class="p-5 text-center">
+                        <h2 class="font-semibold text-lg md:text-xl text-yellow-400 mb-1">Nama Wali Kelas, S.Pd.</h2>
+                        <div class="mt-3 space-y-1 text-left bg-black/40 p-3 rounded-lg border border-white/5">
+                            <p class="text-xs text-gray-300">
+                                <span class="block text-gray-500 mb-[2px] font-medium">TTL:</span> Malang, 01 Januari 1980
+                            </p>
+                            <p class="text-xs text-gray-300 mt-2">
+                                <span class="block text-gray-500 mb-[2px] font-medium">Motto / Pesan:</span> "Teruslah semangat belajar untuk masa depan."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Bar untuk Siswa -->
+            <div class="max-w-md mx-auto mb-12 reveal delay-200">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <input type="text" id="searchInput" 
+                        class="block w-full pl-11 pr-4 py-3 bg-[#151515] border border-gray-800 rounded-xl text-sm placeholder-gray-500 text-white focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all" 
+                        placeholder="Search Student Name...">
+                </div>
+            </div>
+
+            <!-- Grid 34 Siswa -->
+            <div id="studentGrid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+                <!-- Data 34 siswa akan di-render ke sini oleh JavaScript -->
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Script Utama (Observer & Render Data) -->
+    <script>
+        // 1. SETUP INTERSECTION OBSERVER (Dari kodenya kamu)
+        const observerOptions = { threshold: 0.15 };
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-active');
+                    observer.unobserve(entry.target); // Animasi diputar 1x saja
+                }
+            });
+        }, observerOptions);
+
+        // Fungsi untuk mengaktifkan observer pada elemen yang punya class .reveal
+        function observeElements() {
+            document.querySelectorAll('.reveal:not(.is-active)').forEach((element) => {
+                revealObserver.observe(element);
+            });
+        }
+
+        // Jalankan pertama kali untuk Hero Section & Penjelasan
+        observeElements();
+
+
+        // 2. DATA 34 SISWA XI TKJ 4
+        // Silakan edit nama, ttl, hobi, dan nama file gambar di bawah ini
+        const students = [
+            { name: "Siswa 1", ttl: "Malang, -", Ig: "testing", IgLink: "-", image: "Contoh foto1.jpg" },
+            { name: "Siswa 2", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto2.jpg" },
+            { name: "Siswa 3", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto3.jpg" },
+            { name: "Siswa 4", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto4.jpg" },
+            { name: "Siswa 5", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto5.jpg" },
+            { name: "Siswa 6", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto6.jpg" },
+            { name: "Siswa 7", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto7.jpg" },
+            { name: "Siswa 8", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto8.jpg" },
+            { name: "Siswa 9", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto9.jpg" },
+            { name: "Siswa 10", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto10.jpg" },
+            { name: "Siswa 11", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto11.jpg" },
+            { name: "Siswa 12", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto12.jpg" },
+            { name: "Siswa 13", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto13.jpg" },
+            { name: "Siswa 14", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto14.jpg" },
+            { name: "Siswa 15", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto15.jpg" },
+            // { name: "Siswa 15", ttl: "Malang, -", Ig: "-", IgLink："-", image: "foto15.jpg" },
+            { name: "Siswa 16", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto16.jpg" },
+            { name: "Siswa 17", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto17.jpg" },
+            { name: "Siswa 18", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto18.jpg" },
+            { name: "Siswa 19", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto19.jpg" },
+            { name: "Siswa 20", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto20.jpg" },
+            { name: "Siswa 21", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto21.jpg" },
+            { name: "Siswa 22", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto22.jpg" },
+            { name: "Siswa 23", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto23.jpg" },
+            { name: "Siswa 24", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto24.jpg" },
+            { name: "Siswa 25", ttl: "Malang, -", Ig: "-", IgLink: "", image: "foto25.jpg" },
+            { name: "Siswa 26", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto26.jpg" },
+            { name: "Siswa 27", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto27.jpg" },
+            { name: "Siswa 28", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto28.jpg" },
+            { name: "Siswa 29", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto29.jpg" },
+            { name: "Siswa 30", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto30.jpg" },
+            { name: "Siswa 31", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto31.jpg" },
+            { name: "Siswa 32", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto32.jpg" },
+            { name: "Siswa 33", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto33.jpg" },
+            { name: "Siswa 34", ttl: "Malang, -", Ig: "-", IgLink: "-", image: "foto34.jpg" },
+            // { name: "Siswa 34", ttl: "Malang, -", Ig: "-", IgLink: "-", image："foto34.jpg" }
+        ];
+
+        const studentGrid = document.getElementById('studentGrid');
+        const searchInput = document.getElementById('searchInput');
+
+        // 3. FUNGSI UNTUK MERENDER DATA KE HTML
+        function renderStudents(data) {
+            studentGrid.classList.toggle('has-34-students', data.length === 34);
+            studentGrid.innerHTML = ''; 
+            
+            if(data.length === 0) {
+                studentGrid.innerHTML = '<p class="text-gray-500 col-span-full text-center py-10">Siswa tidak ditemukan...</p>';
+                return;
+            }
+
+            data.forEach((student, index) => {
+                // Modifikasi delay agar animasi munculnya terlihat bergelombang/bergantian
+                const delayClass = (index % 4 === 0) ? '' : `delay-${(index % 4) * 100}`;
+                
+                const card = `
+                    <div class="reveal ${delayClass} group bg-[#151515] rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/50">
+                        <div class="aspect-[3/4] bg-[#222] overflow-hidden relative">
+                            <!-- Fallback error image ditambahkan kalau foto belum diganti -->
+                            <img src="${student.image}" onerror="this.src='https://via.placeholder.com/400x500/222/555?text=Foto'" alt="${student.name}" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        
+                        <div class="p-4">
+                            <h2 class="font-semibold text-sm md:text-base text-gray-100 line-clamp-1 group-hover:text-yellow-400 transition-colors">${student.name}</h2>
+                            
+                            <div class="mt-2 space-y-1">
+                                <p class="text-[10px] md:text-xs text-gray-400">
+                                    <span class="block text-gray-500 mb-[2px]">TTL:</span>
+                                    ${student.ttl}
+                                </p>
+                                <p class="text-[10px] md:text-xs text-gray-400">
+                                    <span class="text-gray-500 mb-[2px]">Instagram:</span>
+                                    <a href="${student.IgLink}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">
+                                        ${student.Ig}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                studentGrid.innerHTML += card;
+            });
+
+            // Pantau kartu siswa yang baru di-render agar terkena efek .reveal
+            observeElements();
+        }
+
+        // Tampilkan 34 siswa pertama kali
+        renderStudents(students);
+
+        // 4. FITUR PENCARIAN
+        searchInput.addEventListener('input', (e) => {
+            const keyword = e.target.value.toLowerCase();
+            const filteredData = students.filter(student => 
+                student.name.toLowerCase().includes(keyword)
+            );
+            renderStudents(filteredData);
+            
+            // Karena saat search elemen di-render ulang, kita perlu trigger animasi manual
+            setTimeout(() => {
+                document.querySelectorAll('#studentGrid .reveal').forEach(el => el.classList.add('is-active'));
+            }, 50);
+        });
+    </script>
+</body>
+</html>
